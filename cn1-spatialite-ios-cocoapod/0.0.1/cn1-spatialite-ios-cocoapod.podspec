@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "cn1-spatialite-ios"
+  s.name         = "cn1-spatialite-ios-cocoapod"
   s.version      = "0.0.1"
   s.summary      = "Spatialite build for iOS"
 

@@ -47,7 +47,7 @@
  This callback is used to "bless" an sqlite connection that has just been opened.
  */
 -(void)onOpen:(int)index {
-    enteringNativeAllocations();
+    getThreadLocalData()->nativeAllocationMode = YES;
     JAVA_OBJECT db = com_codename1_spatialite_SpatialiteDB_getDatabaseAtIndex___int_R_com_codename1_db_Database(CN1_THREAD_GET_STATE_PASS_ARG index);
     
     
@@ -61,6 +61,6 @@
     void* _spatialiteConn = spatialite_alloc_connection();
     assert(_spatialiteConn);
     spatialite_init_ex(peer, _spatialiteConn, 1);
-    finishedNativeAllocations();
+    getThreadLocalData()->nativeAllocationMode = NO;
 }
 @end

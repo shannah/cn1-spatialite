@@ -4,6 +4,8 @@ This library adds support for spatial SQLite queries in [Codename One](https://w
 a `SpatialDB` class which extends the built-in Codename One Database class and provides
 access to spatial queries via the [SpatiaLite](https://www.gaia-gis.it/fossil/libspatialite/index) SQLite plugin.
 
+NOTE: This library depends on features of Codename One which won't be available until May 8, 2018.
+
 ## License
 
 This library is subject to the license of SpatiaLite, which is licensed under the MPL tri-license.  More on their license [here](https://www.gaia-gis.it/fossil/libspatialite/index)

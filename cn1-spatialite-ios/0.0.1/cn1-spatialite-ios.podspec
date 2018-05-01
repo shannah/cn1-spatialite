@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "mod_spatialite"
+  s.name         = "cn1-spatialite-ios"
   s.version      = "0.0.1"
   s.summary      = "Spatialite build for iOS"
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/shannah/mod_spatialite.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/shannah/cn1-spatialite.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,8 +91,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "include", "include/**/*.{h,m}"
-  s.header_mappings_dir = "include"
+  s.source_files  = "cn1-spatialite-ios/include", "cn1-spatialite-ios/include/**/*.{h,m}"
+  s.header_mappings_dir = "cn1-spatialite-ios/include"
   #s.exclude_files = "include/geo/util/math.h"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -123,7 +123,7 @@ Pod::Spec.new do |s|
 
   # s.library   = "iconv"
   s.libraries = "z", "xml2", "c++", "charset", "iconv"
-  s.vendored_libraries = 'lib/libgeos_c.a', 'lib/libgeos.a', 'lib/libproj.a', 'lib/libspatialite.a', 'lib/libsqlite3.a'
+  s.vendored_libraries = 'cn1-spatialite-ios/lib/libgeos_c.a', 'cn1-spatialite-ios/lib/libgeos.a', 'cn1-spatialite-ios/lib/libproj.a', 'cn1-spatialite-ios/lib/libspatialite.a', 'cn1-spatialite-ios/lib/libsqlite3.a'
   
 
 

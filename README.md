@@ -21,8 +21,6 @@ This library is subject to the license of SpatiaLite, which is licensed under th
 
 Copy the [CN1Spatialite.cn1lib](bin/CN1Spatialite.cn1lib) into the "lib" directory of your Codename One project, and select "Codename One" > "Refresh Cn1libs" in your project's context menu from the project explorer.  Alternatively you can install it directly through Codename One Settings > Extensions.
 
-WARNING:  This CN1Lib bundles its own copy of SQLite and SpatiaLite as a static libraries on iOS.  This results large project jar files when building for iOS, and will likely put you over the size limit for builds on the free Codename One account level.  You will require a basic subscription or higher to build apps for iOS when using this lib.
-
 NOTE: If your project was created before June 2018, you will likely need to make the following modification to your build.xml file in order for your project to build correctly with the CN1Spatialite module.   The `-post-jar` target should look like this:
 
 ~~~~

@@ -223,12 +223,13 @@ public class SpatialiteDB extends Database {
         }
         boolean exists = Database.exists(databaseName);
         SpatialiteDB out = new SpatialiteDB(Database.openOrCreate(databaseName));
+        String dylib = out.getSplatialiteDylib();
+        if (dylib != null) {
+            out.execute("SELECT load_extension('"+out.getSplatialiteDylib()+"')");
+        }
         if (!exists) {
             try {
-                String dylib = out.getSplatialiteDylib();
-                if (dylib != null) {
-                    out.execute("SELECT load_extension('"+out.getSplatialiteDylib()+"')");
-                }
+                
                 out.execute("SELECT InitSpatialMetadata()");
             } catch (Throwable t) {
                 Log.e(t);
